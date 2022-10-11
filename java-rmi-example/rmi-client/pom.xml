@@ -6,14 +6,16 @@
         <artifactId>rmi_example</artifactId>
         <groupId>com.datmt.rmi</groupId>
         <version>0.0.1</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
+    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>rmi-client</artifactId>
 
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -22,7 +24,17 @@
             <groupId>com.datmt.rmi</groupId>
             <artifactId>rmi_example</artifactId>
             <version>0.0.1</version>
-            <scope>compile</scope>
+
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- inherits config from parent: can override if required -->
+            </plugin>
+        </plugins>
+    </build>
 </project>
